@@ -1,0 +1,134 @@
+@import "_standard.scss";
+@import "_navbar.scss";
+
+
+
+main{
+  @include center();
+  flex-direction: column;
+  background: $grey;
+  height: 90vh;
+  width: 100vw;
+}
+
+.container-home{
+  @include center();
+  justify-content: space-around;
+  width: 90vw;
+  height: 80vh;
+
+  .cont{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    // border: 2px solid blue;
+    width: 45%;
+
+    h1{
+      font-size: 4.5rem;
+      font-family: $font1;
+      width: 100%;
+    }
+
+    p{
+      width: 80%;
+      font-size: 1.5rem;
+      text-align: justify;
+    }
+
+    button{
+      background: $black;
+      color: $white;
+      font-size: 1.3rem;
+      padding: 10px 15px;
+      max-width: 200px;
+    }
+
+    //! Flex CONT para laptops
+    @media (min-width: 769px) and (max-width: 1248px) {
+      width: 50%;
+    }
+
+    //! Flex CONT para tablets
+    @media (min-width: 481px) and (max-width: 768px) {
+      width: 90%;
+      height: 50%;
+
+      h1{
+        width: 100%;
+        font-size: 2.5rem;
+        font-family: $font1;
+      }
+  
+      p{
+        width: 90%;
+        font-size: 1.2rem;
+      }
+    }
+
+    //! Flex CONT para celulares
+    @media (min-width: 320px) and (max-width: 480px) {
+      text-align: center;
+      width: 100%;
+
+      h1{
+        font-size: 1.5rem;
+        font-family: $font1;
+      }
+  
+      p{
+        width: 100%;
+        font-size: 1rem;
+        text-align: justify;
+      }
+
+      button{
+        align-self: flex-start;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .img-home{
+    @include center();
+    width: 700px;
+    height: 800px;
+    background-color: $more-grey;
+    border-radius: 10px 10px 10px 20%;
+
+    img{
+      width: 100%;
+      max-width: 545px;
+      max-height: 514px;
+    }
+
+    //! Flex IMG para laptops
+    @media (min-width: 769px) and (max-width: 1248px) {
+      width: 400px;
+      height: 500px;
+    }
+
+    //! Flex IMG para tablets
+    @media (min-width: 481px) and (max-width: 768px) {
+      width: 90%;
+      height: 50%;
+    }
+
+    //! Flex IMG para celulares
+    @media (min-width: 320px) and (max-width: 480px) {
+      width: 90%;
+      height: 40%;
+    }
+  }
+
+  //! Flex .CONTAINER-HOME para tablets
+  @media (min-width: 481px) and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  //! Flex .CONTAINER-HOME para celulares
+  @media (min-width: 320px) and (max-width: 480px) {
+    flex-direction: column;
+  }
+}
+
