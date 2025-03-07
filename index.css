@@ -23,6 +23,7 @@
 header {
   background: #949494;
   position: relative;
+  overflow-x: hidden;
 }
 header nav {
   display: flex;
@@ -388,7 +389,7 @@ main {
   align-items: center;
   justify-content: center;
   margin-top: 10vh;
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
   border: 2px solid red;
   background: #FFF;
@@ -426,19 +427,45 @@ main {
   font-weight: 600;
 }
 #collection .collection-container .best {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
   width: 100%;
   background: aquamarine;
 }
 #collection .collection-container .best .pic-best {
   width: 400px;
-  height: 400px;
+  height: 500px;
   border-radius: 20% 0 0 0;
   background: #949494;
 }
+#collection .collection-container .best .text-best {
+  border: 2px solid yellowgreen;
+}
+#collection .collection-container .best .text-best h1 {
+  font-size: 3rem;
+}
 #collection .collection-container .best .text-best p {
+  width: 400px;
+}
+#collection .collection-container .best .text-best .follow {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 36%;
+  top: 90%;
+  background: #2c2c2c;
+  height: 100px;
+  width: 600px;
+}
+#collection .collection-container .best .text-best .follow .follow-square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 200px;
+  height: 100px;
+  background: red;
+  border: 2px solid blue;
 }/*# sourceMappingURL=index.css.map */
