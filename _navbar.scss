@@ -40,7 +40,7 @@ header{
         }
 
         //! Flex UL para teblets
-        @media  (max-width: 768px) {
+        @media  (max-width: 1100px) {
           transform: translateX(100vw);
           background: $grey;
           margin-left: 0px;
@@ -53,7 +53,7 @@ header{
       }
 
       //! Flex UL para teblets
-      @media  (max-width: 768px) {
+      @media  (max-width: 1100px) {
         background: $grey;
 
         flex-direction: column;
@@ -156,7 +156,7 @@ header{
     }
 
     //! Flex NAV para teblets
-    @media (max-width: 768px) {
+    @media (max-width: 1100px) {
 
       .button-nav{
         display: none;
@@ -173,7 +173,7 @@ header{
     position: relative;
 
     //! Flex HAMBURGUER para teblets
-    @media (max-width: 768px) {
+    @media (max-width: 1100px) {
       display: block;
     }
   }

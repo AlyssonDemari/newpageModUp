@@ -61,7 +61,7 @@ header nav ul li:hover {
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   header nav ul li {
     transform: translateX(100vw);
     background: #949494;
@@ -71,7 +71,7 @@ header nav ul li:hover {
 header nav ul .button-list {
   display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   header nav ul {
     background: #949494;
     flex-direction: column;
@@ -156,7 +156,7 @@ header nav button:hover {
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   header nav .button-nav {
     display: none;
   }
@@ -167,7 +167,7 @@ header .hamburger {
   cursor: pointer;
   position: relative;
 }
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   header .hamburger {
     display: block;
   }
@@ -268,6 +268,7 @@ main {
   flex-direction: column;
   background: #949494;
   width: 100vw;
+  gap: 50px;
 }
 
 .container-home {
@@ -276,7 +277,7 @@ main {
   justify-content: center;
   justify-content: space-around;
   width: 90vw;
-  height: 80vh;
+  height: 90vh;
 }
 .container-home .cont {
   display: flex;
@@ -301,45 +302,6 @@ main {
   padding: 10px 15px;
   max-width: 200px;
 }
-@media (min-width: 769px) and (max-width: 1248px) {
-  .container-home .cont {
-    width: 50%;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .container-home .cont {
-    width: 90%;
-    height: 50%;
-  }
-  .container-home .cont h1 {
-    width: 100%;
-    font-size: 2.5rem;
-    font-family: "Playfair Display", serif;
-  }
-  .container-home .cont p {
-    width: 90%;
-    font-size: 1.2rem;
-  }
-}
-@media (min-width: 320px) and (max-width: 480px) {
-  .container-home .cont {
-    text-align: center;
-    width: 100%;
-  }
-  .container-home .cont h1 {
-    font-size: 1.5rem;
-    font-family: "Playfair Display", serif;
-  }
-  .container-home .cont p {
-    width: 100%;
-    font-size: 1rem;
-    text-align: justify;
-  }
-  .container-home .cont button {
-    align-self: flex-start;
-    font-size: 1rem;
-  }
-}
 .container-home .img-home {
   display: flex;
   align-items: center;
@@ -354,32 +316,20 @@ main {
   max-width: 545px;
   max-height: 514px;
 }
-@media (min-width: 769px) and (max-width: 1248px) {
-  .container-home .img-home {
-    width: 400px;
-    height: 500px;
+@media (min-width: 769px) and (max-width: 1100px) {
+  .container-home .cont {
+    width: 50%;
   }
-}
-@media (min-width: 481px) and (max-width: 768px) {
+  .container-home .cont h1 {
+    font-size: 3rem;
+  }
+  .container-home .cont p {
+    width: 80%;
+    font-size: 1.3rem;
+  }
   .container-home .img-home {
-    width: 90%;
+    width: 50%;
     height: 50%;
-  }
-}
-@media (min-width: 320px) and (max-width: 480px) {
-  .container-home .img-home {
-    width: 90%;
-    height: 40%;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .container-home {
-    flex-direction: column;
-  }
-}
-@media (min-width: 320px) and (max-width: 480px) {
-  .container-home {
-    flex-direction: column;
   }
 }
 
@@ -387,11 +337,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
   height: 100vh;
   width: 100vw;
   background: #FFF;
-  border: 2px solid red;
 }
 #collection .collection-container {
   display: flex;
@@ -403,6 +351,9 @@ main {
 #collection .collection-container h1 {
   font-family: "Playfair Display", serif;
   font-size: 3rem;
+}
+#collection .collection-container p {
+  font-size: 1.1rem;
 }
 #collection .collection-container .pictures {
   display: flex;
@@ -431,18 +382,6 @@ main {
 #collection .collection-container .pictures .pic:hover {
   transform: translateY(-5px) scale(1.02);
 }
-@media (min-width: 769px) and (max-width: 1248px) {
-  #collection .collection-container .pictures .pic {
-    width: 300px;
-    height: 300px;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  #collection .collection-container .pictures .pic {
-    width: 150px;
-    height: 150px;
-  }
-}
 #collection .collection-container .best {
   margin-top: 5vh;
   position: relative;
@@ -457,13 +396,6 @@ main {
   height: 500px;
   border-radius: 30% 0 0 0;
   background: #949494;
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  #collection .collection-container .best .pic-best {
-    width: 90%;
-    height: 250px;
-    border-radius: 0 0 0 0;
-  }
 }
 #collection .collection-container .best .text-best {
   align-self: self-start;
@@ -483,7 +415,7 @@ main {
   justify-content: space-between;
   position: absolute;
   left: 40%;
-  top: 90%;
+  top: 85%;
   height: 100px;
   width: 600px;
 }
@@ -502,38 +434,46 @@ main {
   font-family: "Playfair Display", serif;
   font-weight: 600;
 }
-@media (min-width: 481px) and (max-width: 768px) {
-  #collection .collection-container .best .text-best .follow .follow-square {
-    width: 50%;
+@media (min-width: 769px) and (max-width: 1100px) {
+  #collection .collection-container {
+    margin-top: 10vh;
   }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  #collection .collection-container .best .text-best .follow {
-    left: 5%;
-    top: 100%;
-    width: 60%;
+  #collection .collection-container p {
+    width: 500px;
   }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  #collection .collection-container .best .text-best {
-    align-self: center;
+  #collection .collection-container .pictures .pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 220px;
+    background: #949494;
   }
-  #collection .collection-container .best .text-best h1 {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
   #collection .collection-container .best {
     flex-direction: column-reverse;
+    justify-content: center;
+    margin-top: 0vh;
   }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  #collection .collection-container p {
-    width: 60%;
+  #collection .collection-container .best .pic-best {
+    width: 100%;
+    height: 200px;
+    border-radius: 0;
+    background: #949494;
   }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  #collection {
-    padding-top: 20vh;
+  #collection .collection-container .best .text-best {
+    align-self: center;
+    height: 100%;
+  }
+  #collection .collection-container .best .text-best h1 {
+    font-size: 2.5rem;
+  }
+  #collection .collection-container .best .text-best .follow {
+    left: 0%;
+    top: 100%;
+    width: 100%;
+  }
+  #collection .collection-container .best .text-best .follow .follow-square {
+    width: 233px;
+    height: 70px;
   }
 }/*# sourceMappingURL=index.css.map */
