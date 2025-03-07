@@ -145,9 +145,12 @@ main{
   .collection-container{
     @include center();
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
 
-    border: 2px solid blue;
+    h1{
+      font-family: $font1;
+      font-size: 3rem;
+    }
 
     .pictures{
       @include center();
@@ -156,7 +159,7 @@ main{
   
       .pic{
         @include center();
-        width: 300px;
+        width: 400px;
         height: 300px;
         background: $grey;
   
@@ -169,38 +172,47 @@ main{
           border: none;
           font-weight: 600;
         }
+
+        &:hover{
+          transform: translateY(-5px) scale(1.02);
+        }
       }
     }
 
     .best{
+      margin-top: 5vh;
       position: relative;
       @include center();
+      gap: 30px;
       width: 100%;
-      background: aquamarine;
 
       .pic-best{
         width: 400px;
         height: 500px;
-        border-radius: 20% 0 0 0;
+        border-radius: 30% 0 0 0;
         background: $grey;
       }
 
       .text-best{
-        border: 2px solid yellowgreen;
+        align-self: self-start;
+        height: 400px;
 
         h1{
-          font-size: 3rem;
+          font-family: $font1;
+          font-size: 4rem;
+          width: 500px;
         }
 
         p{
-          width: 400px;
+          margin-top: 30px;
+          width: 500px;
         }
 
         .follow{
           display: flex;
           justify-content: space-between;
           position: absolute;
-          left: 36%;
+          left: 40%;
           top: 90%;
           background: $more-dark-grey;
           height: 100px;
@@ -211,8 +223,14 @@ main{
             text-align: center;
             width: 200px;
             height: 100px;
-            background: red;
-            border: 2px solid blue;
+            background: $more-dark-grey-trans;
+
+            p{
+              margin-top: 0;
+              font-size: 1.3rem;
+              font-family: $font1;
+              font-weight: 600;
+            }
           }
         }
       }
