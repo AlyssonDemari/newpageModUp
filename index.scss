@@ -1,13 +1,14 @@
 @import "_standard.scss";
 @import "_navbar.scss";
 
-
+body{
+  overflow-x: hidden
+}
 
 main{
   @include center();
   flex-direction: column;
   background: $grey;
-  height: 90vh;
   width: 100vw;
 }
 
@@ -132,3 +133,65 @@ main{
   }
 }
 
+#collection{
+  @include center();
+  margin-top: 10vh;
+  height: 90vh;
+  width: 100vw;
+  border: 2px solid red;
+  background: $white;
+
+
+  .collection-container{
+    @include center();
+    flex-direction: column;
+    gap: 50px;
+
+    border: 2px solid blue;
+
+    .pictures{
+      @include center();
+      width: 100%;
+      gap: 20px;
+  
+      .pic{
+        @include center();
+        width: 300px;
+        height: 300px;
+        background: $grey;
+  
+        button{
+          padding: 10px 15px;
+          width: 80%;
+          align-self: self-end;
+          background: $white;
+          margin-bottom: 5%;
+          border: none;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .best{
+      @include center();
+      gap: 50px;
+      width: 100%;
+      background: aquamarine;
+
+      .pic-best{
+        width: 400px;
+        height: 400px;
+        border-radius: 20% 0 0 0;
+        background: $grey;
+      }
+
+      .text-best{
+
+
+        p{
+          width: 200px;
+        }
+      }
+    }
+  }
+}
