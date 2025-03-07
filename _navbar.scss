@@ -6,7 +6,8 @@ header{
   
   nav{
     @include center();
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 30px;
     height: 10vh;
 
     ul{
