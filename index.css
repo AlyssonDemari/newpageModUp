@@ -316,7 +316,7 @@ main {
   max-width: 545px;
   max-height: 514px;
 }
-@media (min-width: 769px) and (max-width: 1100px) {
+@media (min-width: 770px) and (max-width: 1100px) {
   .container-home .cont {
     width: 50%;
   }
@@ -330,6 +330,38 @@ main {
   .container-home .img-home {
     width: 50%;
     height: 50%;
+  }
+}
+@media (max-width: 769px) {
+  .container-home {
+    flex-direction: column;
+  }
+  .container-home .cont {
+    width: 90%;
+    align-items: center;
+  }
+  .container-home .cont h1 {
+    width: 80%;
+    font-size: 2rem;
+  }
+  .container-home .cont p {
+    width: 80%;
+    font-size: 1rem;
+  }
+  .container-home .cont button {
+    margin-left: 10%;
+    align-self: flex-start;
+  }
+  .container-home .img-home {
+    width: 80%;
+    height: 40%;
+    max-height: 30%;
+    border-radius: 10px;
+  }
+  .container-home .img-home img {
+    width: 70%;
+    max-width: 50%;
+    max-height: 70%;
   }
 }
 
@@ -434,7 +466,7 @@ main {
   font-family: "Playfair Display", serif;
   font-weight: 600;
 }
-@media (min-width: 769px) and (max-width: 1100px) {
+@media (min-width: 770px) and (max-width: 1100px) {
   #collection .collection-container {
     margin-top: 10vh;
   }
@@ -442,12 +474,8 @@ main {
     width: 500px;
   }
   #collection .collection-container .pictures .pic {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 220px;
     height: 220px;
-    background: #949494;
   }
   #collection .collection-container .best {
     flex-direction: column-reverse;
@@ -475,5 +503,72 @@ main {
   #collection .collection-container .best .text-best .follow .follow-square {
     width: 233px;
     height: 70px;
+  }
+}
+@media (max-width: 769px) {
+  #collection .collection-container {
+    width: 100%;
+    margin-top: 20vh;
+    text-align: center;
+  }
+  #collection .collection-container h1 {
+    font-size: 2rem;
+    width: 80%;
+  }
+  #collection .collection-container p {
+    width: 80%;
+    text-align: justify;
+  }
+  #collection .collection-container .pictures .pic {
+    width: 40%;
+    height: 200px;
+  }
+  #collection .collection-container .pictures .pic:nth-child(3) {
+    display: none;
+  }
+  #collection .collection-container .best {
+    flex-direction: column-reverse;
+    margin-top: 0vh;
+  }
+  #collection .collection-container .best .pic-best {
+    width: 80%;
+    height: 200px;
+    border-radius: 0;
+    background: #949494;
+  }
+  #collection .collection-container .best .text-best {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80%;
+    width: 100%;
+  }
+  #collection .collection-container .best .text-best h1 {
+    font-size: 1.8rem;
+  }
+  #collection .collection-container .best .text-best p {
+    width: 80%;
+  }
+  #collection .collection-container .best .text-best .follow {
+    left: 10%;
+    top: 100%;
+    width: 80%;
+    height: 70px;
+  }
+  #collection .collection-container .best .text-best .follow .follow-square {
+    width: 80%;
+    height: 70px;
+  }
+  #collection .collection-container .best .text-best .follow .follow-square .follow-square-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #collection .collection-container .best .text-best .follow .follow-square .follow-square-text p {
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
   }
 }/*# sourceMappingURL=index.css.map */

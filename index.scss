@@ -62,7 +62,7 @@ main{
   }
 
   //! Flex para tablets
-  @media (min-width: 769px) and (max-width: 1100px) {
+  @media (min-width: 770px) and (max-width: 1100px) {
     .cont{
       width: 50%;
 
@@ -79,6 +79,44 @@ main{
     .img-home{
       width: 50%;
       height: 50%;
+    }
+  }
+
+  //! Flex para celulares
+  @media (max-width: 769px) {
+    flex-direction: column;
+
+    .cont{
+      width: 90%;
+      align-items: center;
+
+      h1{
+        width: 80%;
+        font-size: 2rem;
+      }
+  
+      p{
+        width: 80%;
+        font-size: 1rem;
+      }
+
+      button{
+        margin-left: 10%;
+        align-self: flex-start;
+      }
+    }
+
+    .img-home{
+      width: 80%;
+      height: 40%;
+      max-height: 30%;
+      border-radius: 10px;
+
+      img{
+        width: 70%;
+        max-width: 50%;
+        max-height: 70%;
+      }
     }
   }
 }
@@ -187,7 +225,7 @@ main{
     }
 
     //! Flex para tablets
-    @media (min-width: 769px) and (max-width: 1100px) {
+    @media (min-width: 770px) and (max-width: 1100px) {
       margin-top: 10vh;
       p{
         width: 500px;
@@ -195,10 +233,8 @@ main{
 
       .pictures{
         .pic{
-          @include center();
           width: 220px;
           height: 220px;
-          background: $grey;
         }
       }
 
@@ -230,6 +266,84 @@ main{
             .follow-square{
               width: 233px;
               height: 70px;
+            }
+          }
+        }
+      }
+    }
+
+    //! Flex para celulares
+    @media (max-width: 769px) {
+      width: 100%;
+      margin-top: 20vh;
+
+      text-align: center;
+      h1{
+        font-size: 2rem;
+        width: 80%;
+      }
+
+      p{
+        width: 80%;
+        text-align: justify;
+      }
+
+      .pictures{
+        .pic{
+          width: 40%;
+          height: 200px;
+
+          &:nth-child(3){
+            display: none;
+          }
+        }
+      }
+
+      .best{
+        flex-direction: column-reverse;
+        margin-top: 0vh;
+
+        .pic-best{
+          width: 80%;
+          height: 200px;
+          border-radius: 0;
+          background: $grey;
+        }
+
+        .text-best{
+          @include center();
+          flex-direction: column;
+          height: 80%;
+          width: 100%;
+          
+          h1{
+            font-size: 1.8rem;
+          }
+
+          p{
+            width: 80%;
+          }
+          
+          .follow{
+            left: 10%;
+            top: 100%;
+            width: 80%;
+            height: 70px;
+
+            .follow-square{
+              width: 80%;
+              height: 70px;
+
+              .follow-square-text{
+                @include center();
+                flex-direction: column;
+                
+                p{
+                  text-align: center;
+                  font-size: 1rem;
+                  width: 100%;
+                }
+              }
             }
           }
         }
