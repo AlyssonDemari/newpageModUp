@@ -1,300 +1,188 @@
 @import "standard.scss";
 
 header{
-    background: $grey;
-    position: relative;
-  
-  nav{
-    @include center();
-    justify-content: space-between;
-    padding: 0 30px;
+    width: 100%;
     height: 10vh;
+}
 
-    ul{
-      @include center();
-      justify-content: space-around;
-      width: 35%;
-      transition: all 0.5s ease-in-out;
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    padding-inline: 30px;
+    height: 100%;
 
-
-      li {
-        text-align: center;
-        width: 70%;
-        margin-left: 20px;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 10px; 
-        color:black;
-        transition: background-position 1s ease; 
-        background-image: linear-gradient(to top, transparent 50%, $more-dark-grey 50%);
-        background-size: 100% 200%;
-        background-position: left bottom;
-        font-size: 1.5rem;
-        transition: all 1s ease-in-out;
-
-        &:hover {
-          background-position: right top;
-          color:$white;
-          transition: all 0.5s ease-in-out;
-          cursor: pointer;
-        }
-
-        //! Flex UL para teblets
-        @media  (max-width: 1100px) {
-          transform: translateX(100vw);
-          background: $grey;
-          margin-left: 0px;
-        }
-        
-      }
-
-      .button-list{
-        display: none;
-      }
-
-      //! Flex UL para teblets
-      @media  (max-width: 1100px) {
-        background: $grey;
-
-        flex-direction: column;
-        justify-content: space-around;
-        position: absolute;
-        top: 10vh;
-        left: 100%;
-        height: 90vh;
-
-        width: 50%;
-        box-shadow: -26px 10px 15px -3px rgba(0,0,0,0.1);
-        z-index: 10;
-
-        .button-list{
-          display: block;
-
-          a{
-            text-align: center;
-            width: 200px;
-            padding: 10px 20px;
-            border: 3px solid $more-dark-grey;
-            color:black;
-            transition: background-position 1s ease; 
-            background-image: linear-gradient(to left, $grey 50%, $more-dark-grey 50%);
-            background-size: 200% 100%;
-            background-position: right bottom;
-            font-size: 1.5rem;
-            transition: all 1s ease-in-out;
-      
-            &:hover {
-              background-position: left bottom;
-              color:$white;
-              transition: all 0.5s ease-in-out;
-              cursor: pointer;
-            }
-          }
-        }
-      }
+    .img-logo{
+        width: 200px;
+        border: 2px solid red;
     }
 
-    ul.active{
-      transition: all 0.5s ease-in-out;
-      left: 50%;
+    ul{
+        display: flex;
+        justify-content: center;
+        gap: 15%;
+        width:70%;
+        transition: all 0.5s ease-in-out;
 
-
-      li {
-        transform: translateX(100px);
-        opacity: 0;
-        animation: fadeIn 0.5s forwards;
-      }
-
-      li:nth-child(1) {
-        animation-delay: 0.2s;
-      }
-
-      li:nth-child(2) {
-        animation-delay: 0.4s;
-      }
-
-      li:nth-child(3) {
-        animation-delay: 0.6s;
-      }
-
-      li:nth-child(4) {
-        animation-delay: 0.8s;
-      }
-
-      li:nth-child(5) {
-        animation-delay: 1s;
-      }
-
-      @keyframes fadeIn {
-        to {
-          transform: translateX(0px);
-          opacity: 1;
+        li{
+            font-size: 1.2rem;
+            padding: 5px 25px;
         }
-      }
 
+        
+        .login-list{
+            display: none;
+        }
     }
 
     button{
-      text-align: center;
-      width: 200px;
-      padding: 10px 20px;
-      border: 3px solid $more-dark-grey;
-      color:black;
-      transition: background-position 1s ease; 
-      background-image: linear-gradient(to left, $grey 50%, $more-dark-grey 50%);
-      background-size: 200% 100%;
-      background-position: right bottom;
-      font-size: 1.5rem;
-      transition: all 1s ease-in-out;
-
-      &:hover {
-        background-position: left bottom;
-        color:$white;
-        transition: all 0.5s ease-in-out;
-        cursor: pointer;
-      }
+        padding: 5px 30px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border: 3px solid $darker-grey;
+        color: $darker-grey;
+        background: transparent;
     }
 
-    //! Flex NAV para teblets
-    @media (max-width: 1100px) {
+    @media (max-width: 1165px) {
+        background: aqua;
 
-      .button-nav{
-        display: none;
-      }
+        ul{
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            height: 90vh;
+            position: absolute;
+            top: 10vh;
+            left: 100%;
+            background: aqua;
+            border: 2px solid red;
+            .login-list{
+                display: block;
+            }
+        }
+        ul.active{
+            background: red;
+            left: 50%;
+        }
+
+        button{
+            display: none;
+            visibility: hidden;
+        }
+
     }
-  }
-
-
-  //? Animação do hamburger
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    position: relative;
-
-    //! Flex HAMBURGUER para teblets
-    @media (max-width: 1100px) {
-      display: block;
-    }
-  }
-
-  .hamburger .bar {
-      width: 80px;
-      height: 5px;
-      background-color: black;
-      transform-origin: center;
-      margin: 10px 0;
-      background-color: $more-dark-grey;
-      transition: all 1s;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
-
-      //! Flex .BAR para celulares
-      @media (max-width: 480px) {
-        width: 50px;
-      }
-  }
-
-  @keyframes bar1Animation {
-      0% {
-      }
-
-      50%{
-          transform: translateY(15px);
-      }
-      100% {
-          transform: translateY(15px) rotate(45deg);
-      }
-  }
-
-  @keyframes bar2Animation {
-      0% {
-
-      }
-      50%{
-          transform: scale(0.7);
-      }
-      100% {
-          opacity: 0;
-      }
-  }
-
-  @keyframes bar3Animation {
-      0% {
-
-      }
-      50%{
-          transform: translateY(-15px) rotate(0deg);
-
-      }
-      100% {
-          transform: translateY(-15px) rotate(130deg);
-      }
-  }
-
-  @keyframes bar1Animation-rev {
-      0% {
-      }
-
-      50%{
-          transform: translateY(15px);
-      }
-      100% {
-          transform: translateY(15px) rotate(45deg);
-      }
-  }
-
-  @keyframes bar2Animation-rev {
-      0% {
-
-      }
-      50%{
-          transform: scale(0.7);
-          opacity: 0;
-      }
-      100% {
-          transform: scale(0.7);
-          opacity: 0;
-      }
-  }
-
-  @keyframes bar3Animation-rev {
-      0% {
-
-      }
-      50%{
-          transform: translateY(-15px) rotate(0deg);
-
-      }
-      100% {
-          transform: translateY(-15px) rotate(130deg);
-      }
-  }
-
-  .bar1{
-      animation: bar1Animation-rev 1s reverse forwards;
-  }
-
-  .bar2 {
-      animation: bar2Animation-rev 1s reverse forwards;
-  }
-
-  .bar3 {
-      animation: bar3Animation-rev 1s reverse forwards;
-  }
-
-  .active .bar1 {
-      animation: bar1Animation 1s forwards;
-  }
-
-  .active .bar2 {
-      animation: bar2Animation 1s forwards;
-  }
-
-  .active .bar3 {
-      animation: bar3Animation 1s forwards;
-  }
-
 }
 
-  
+    .hamburger {
+        display: none;
+        visibility: hidden;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
+
+        @media (max-width: 1165px) {
+            display: block;
+            visibility: visible;
+        }
+    }
+    .hamburger .bar {
+        width: 80px;
+        height: 5px;
+        background-color: black;
+        transform-origin: center;
+        margin: 10px 0;
+        background-color: #FFF;
+        transition: all 1s;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
+    }
+    @keyframes bar1Animation {
+        0% {
+        }
+    
+        50%{
+            transform: translateY(15px);
+        }
+        100% {
+            transform: translateY(15px) rotate(45deg);
+        }
+    }
+    @keyframes bar2Animation {
+        0% {
+    
+        }
+        50%{
+            transform: scale(0.7);
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    @keyframes bar3Animation {
+        0% {
+    
+        }
+        50%{
+            transform: translateY(-15px) rotate(0deg);
+    
+        }
+        100% {
+            transform: translateY(-15px) rotate(130deg);
+        }
+    }
+    @keyframes bar1Animation-rev {
+        0% {
+        }
+    
+        50%{
+            transform: translateY(15px);
+        }
+        100% {
+            transform: translateY(15px) rotate(45deg);
+        }
+    }
+    @keyframes bar2Animation-rev {
+        0% {
+    
+        }
+        50%{
+            transform: scale(0.7);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(0.7);
+            opacity: 0;
+        }
+    }
+    @keyframes bar3Animation-rev {
+        0% {
+    
+        }
+        50%{
+            transform: translateY(-15px) rotate(0deg);
+    
+        }
+        100% {
+            transform: translateY(-15px) rotate(130deg);
+        }
+    }
+    .bar1{
+        animation: bar1Animation-rev 1s reverse forwards;
+    }
+    .bar2 {
+        animation: bar2Animation-rev 1s reverse forwards;
+    }
+    .bar3 {
+        animation: bar3Animation-rev 1s reverse forwards;
+    }
+    .active .bar1 {
+        animation: bar1Animation 1s forwards;
+    }
+    .active .bar2 {
+        animation: bar2Animation 1s forwards;
+    }
+    .active .bar3 {
+        animation: bar3Animation 1s forwards;
+    }
