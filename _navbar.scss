@@ -21,7 +21,7 @@ nav{
     ul{
         display: flex;
         justify-content: center;
-        gap: 15%;
+        gap: 10%;
         width:70%;
         transition: all 0.5s ease-in-out;
 
@@ -54,14 +54,22 @@ nav{
             align-items: center;
             width: 50%;
             height: 90vh;
+            gap: 15%;
             position: absolute;
             top: 10vh;
             left: 100%;
             background: aqua;
             border: 2px solid red;
             transition: all 0.5s ease-in-out;
+
             .login-list{
                 display: block;
+                padding: 5px 30px;
+                font-size: 1.2rem;
+                font-weight: 600;
+                border: 3px solid $darker-grey;
+                color: $darker-grey;
+                background: transparent;
             }
         }
         ul.active{
