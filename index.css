@@ -236,11 +236,11 @@ nav button {
 
 body {
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 @media (max-width: 1165px) {
   body {
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
   }
 }
