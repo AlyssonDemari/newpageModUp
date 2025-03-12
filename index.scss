@@ -28,6 +28,7 @@ main{
     .container-text-home{
         @include center();
         width: 50%;
+        border: 2px solid green;
 
         .text-home{
             @include center();
@@ -87,7 +88,7 @@ main{
         .container-text-home{
             width: 100%;
             height: 50%;
-
+            margin-top: 20px;
             .text-home{
                 h1{
                     width: 70%;
