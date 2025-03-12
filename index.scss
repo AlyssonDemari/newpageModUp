@@ -5,6 +5,11 @@
 body{
     width: 100vw;
     overflow-x: hidden;
+
+    @media (max-width: 1165px){
+        width: 100vw;
+        overflow-x: hidden;
+    }
 }
 
 main{
