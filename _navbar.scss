@@ -29,11 +29,6 @@ nav{
             font-size: 1.2rem;
             padding: 5px 25px;
         }
-
-        
-        .login-list{
-            display: none;
-        }
     }
 
     button{
@@ -46,45 +41,64 @@ nav{
     }
 
     @media (max-width: 1165px) {
-        background: aqua;
+        background: red;
 
         ul{
-            visibility: hidden;
-            flex-direction: column;
-            align-items: center;
-            width: 50%;
-            height: 90vh;
-            gap: 15%;
-            position: absolute;
-            top: 10vh;
-            left: 100%;
-            background: aqua;
-            border: 2px solid red;
-            transition: all 0.5s ease-in-out;
-
-            .login-list{
-                display: block;
-                padding: 5px 30px;
-                font-size: 1.2rem;
-                font-weight: 600;
-                border: 3px solid $darker-grey;
-                color: $darker-grey;
-                background: transparent;
-            }
-        }
-        ul.active{
-            visibility: visible;
-            background: red;
-            left: 50%;
-            transition: all 0.5s ease-in-out;
+            display: none;
         }
 
         button{
             display: none;
-            visibility: hidden;
+        }
+    }
+}
+
+.nav-mobile{
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    top: 0vh;
+    left: 100%;
+    transition: all 0.5s ease-in-out;
+    overflow-x: hidden;
+    background: aqua;
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 20px 0;
+        height: 100%;
+
+        li{
+            border: 2px solid red;
+            padding: 20px;
+            width: 50%;
+            max-width: 200px;
+            min-width: 120px;
+            text-align: center;
         }
 
+        .login-list{
+            padding: 5px 30px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: 3px solid $darker-grey;
+            color: $darker-grey;
+            background: transparent;
+        }
     }
+}
+
+.nav-mobile.active{
+    position: absolute;
+    width: 50%;
+    top: 0vh;
+    left: 50%;
+
+
+    transition: all 0.5s ease-in-out;
 }
 
     .hamburger {
@@ -93,6 +107,7 @@ nav{
         flex-direction: column;
         cursor: pointer;
         position: relative;
+        z-index: 100;
 
         @media (max-width: 1165px) {
             display: block;
