@@ -387,6 +387,179 @@ main {
 #container-collection {
   border: 2px solid blue;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-inline: 20px;
+}
+#container-collection .container-text-collection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 50%;
+  border: 2px solid red;
+}
+#container-collection .container-text-collection h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  font-family: "DM Serif Text", serif;
+}
+#container-collection .container-text-collection p {
+  font-size: 1.2rem;
+}
+#container-collection .container-text-collection .porjects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 2px solid white;
+}
+#container-collection .container-text-collection .porjects .project {
+  background: #807e7e;
+  width: 30%;
+  height: 100%;
+  position: relative;
+}
+#container-collection .container-text-collection .porjects .project img {
+  width: 100%;
+  height: 100%;
+}
+#container-collection .container-text-collection .porjects .project button {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  padding: 3% 30%;
+}
+@media (min-width: 700px) and (max-width: 1165px) {
+  #container-collection .container-text-collection p {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+#container-collection .container-collection-second {
+  border: 2px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 50%;
+}
+#container-collection .container-collection-second h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  font-family: "DM Serif Text", serif;
+}
+#container-collection .container-collection-second p {
+  width: 90%;
+  font-size: 1.2rem;
+}
+#container-collection .container-collection-second .img-collection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #807e7e;
+  width: 40%;
+  height: 90%;
+  border-radius: 20% 5px 5px 5px;
+}
+#container-collection .container-collection-second .img-collection img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20% 5px 5px 5px;
+}
+#container-collection .container-collection-second .text-collection {
+  width: 40%;
+  height: 70%;
+}
+@media (min-width: 700px) and (max-width: 1165px) {
+  #container-collection .container-collection-second h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    font-family: "DM Serif Text", serif;
+  }
+  #container-collection .container-collection-second p {
+    width: 90%;
+    font-size: 1.1rem;
+  }
+  #container-collection .container-collection-second .img-collection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #807e7e;
+    width: 40%;
+    height: 70%;
+    border-radius: 20% 5px 5px 5px;
+  }
+  #container-collection .container-collection-second .img-collection img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20% 5px 5px 5px;
+  }
+  #container-collection .container-collection-second .text-collection {
+    width: 40%;
+    height: 60%;
+  }
+}
+@media (max-width: 700px) {
+  #container-collection .container-collection-second {
+    flex-direction: column-reverse;
+  }
+  #container-collection .container-collection-second h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    width: 100%;
+  }
+  #container-collection .container-collection-second p {
+    width: 100%;
+    text-align: center;
+    padding-inline: 20px;
+  }
+  #container-collection .container-collection-second .img-collection {
+    flex-direction: column;
+    width: 90%;
+    height: 60%;
+    border-radius: 5px;
+  }
+  #container-collection .container-collection-second .img-collection img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20% 5px 5px 5px;
+  }
+  #container-collection .container-collection-second .text-collection {
+    width: 100%;
+  }
+}
+#container-collection .follow {
+  display: flex;
+  position: absolute;
+  top: 90%;
+  left: 90%;
+  background-color: #5e5e5e;
+  height: 22%;
+  width: 90%;
+}
+#container-collection .follow .square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+#container-collection .follow .square p {
+  text-align: center;
+}
+@media (max-width: 700px) {
+  #container-collection .follow {
+    width: 100%;
+    position: static;
+  }
+  #container-collection .follow .square p {
+    font-size: 1rem;
+  }
 }
 
 #container-product {

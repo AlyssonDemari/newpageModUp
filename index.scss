@@ -82,6 +82,7 @@ main{
         }
     }
 
+    //! Responsividade para tablets
     @media (min-width: 700px) and (max-width: 1165px){
         flex-direction: column;
         
@@ -125,6 +126,7 @@ main{
         }
     }
 
+    //! Responsividade para smatphones
     @media (max-width: 700px){
         flex-direction: column;
        
@@ -175,6 +177,203 @@ main{
 #container-collection{
     border: 2px solid blue;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 20px ;
+
+    .container-text-collection{
+        @include center();
+        flex-direction: column;
+        gap: 20px;
+        height: 50%;
+        border: 2px solid red;
+
+        h1{
+            font-size: 3.5rem;
+            font-weight: 600;
+            font-family: $font1;
+        }
+
+        p{
+            font-size: 1.2rem;
+        }
+
+        .porjects{
+            @include center();
+            gap: 20px;
+            border: 2px solid white;
+
+            .project{
+                background: $dark-grey;
+                width: 30%;
+                height: 100%;
+                position: relative;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+
+                button{
+                    transform: translate(-50%, -50%);
+                    position: absolute;
+                    top: 90%;
+                    left: 50%;
+
+                    padding: 3% 30%;
+                }
+            }
+        }
+
+        //! Responsividade para tablets
+        @media (min-width: 700px) and (max-width: 1165px){
+            p{
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .container-collection-second{
+        border: 2px solid green;
+        @include center();
+        gap: 20px;
+        height: 50%;
+
+
+        h1{
+            font-size: 3.5rem;
+            font-weight: 600;
+            font-family: $font1;
+        }
+
+        p{
+            width: 90%;
+            font-size: 1.2rem;
+        }
+
+        .img-collection{
+            position: relative;
+            @include center();
+            background: $dark-grey;
+            width: 40%;
+            height: 90%;
+            border-radius: 20% 5px 5px 5px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 20% 5px 5px 5px;
+            }
+        }
+
+        .text-collection{
+            width: 40%;
+            height: 70%;
+        }
+
+        //! Responsividade para tablets
+        @media (min-width: 700px) and (max-width: 1165px){
+
+            h1{
+                font-size: 2.4rem;
+                font-weight: 600;
+                font-family: $font1;
+            }
+
+            p{
+                width: 90%;
+                font-size: 1.1rem;
+            }
+
+            .img-collection{
+                @include center();
+                background: $dark-grey;
+                width: 40%;
+                height: 70%;
+                border-radius: 20% 5px 5px 5px;
+    
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20% 5px 5px 5px;
+                }
+            }
+
+            .text-collection{
+                width: 40%;
+                height: 60%;
+            }
+        }
+
+        //! Responsividade para smatphones
+        @media (max-width: 700px){
+            flex-direction: column-reverse;
+
+            h1{
+                text-align: center;
+                font-size: 2.4rem;
+                width: 100%;
+            }
+
+            p{
+                width: 100%;
+                text-align: center;
+                padding-inline: 20px;
+            }
+
+            .img-collection{
+                flex-direction: column;
+                width: 90%;
+                height: 60%;
+                border-radius: 5px;
+    
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20% 5px 5px 5px;
+                }
+            }
+
+            .text-collection{
+                width: 100%;
+            }
+        }
+    }
+
+    .follow{
+        display: flex;
+        position: absolute;
+        top: 90%;
+        left: 90%;
+        background-color: $darker-grey;
+        height: 22%;
+        width: 90%;
+
+        .square{
+            @include center();  
+            flex-direction: column;
+            width: 100%;
+
+            p{
+                text-align: center;
+            }
+        }
+
+        //! Responsividade para smatphones
+        @media (max-width: 700px){
+            width: 100%;
+            position: static;
+
+            .square{
+
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
 }
 
 #container-product{
