@@ -17,6 +17,7 @@ const thirdRadio  = document.querySelector('#terceiro');
 const moveFirstToLast = () =>{
     const firstCard = wrapper.querySelector('.card:first-child');
     const seconCard = wrapper.querySelector('.card:nth-child(2)');
+
     wrapper.appendChild(firstCard)
     wrapper.appendChild(seconCard)
 };

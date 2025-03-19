@@ -28,6 +28,7 @@ body{
     max-width: 1400px;
     border: 2px solid red;
     background-color: $light-grey;
+    overflow-x: hidden;
 }
 
 @mixin center{
