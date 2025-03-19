@@ -58,8 +58,7 @@ nav{
     transition: all 0.5s ease-in-out;
     overflow: hidden;
     background: $light-grey;
-    opacity: 0;
-    visibility: hidden;
+    display: none;
     z-index: 8888;
 
     ul{
@@ -97,6 +96,7 @@ nav{
     width: 50%;
     opacity: 1;
     visibility: visible;
+    display: block;
     transform: translate(0%, 0%);
     transition: all 0.5s ease-in-out;
 }
