@@ -136,8 +136,17 @@ nav button {
   display: block;
   transform: translate(0%, 0%);
   transition: all 0.5s ease-in-out;
+  animation: navbar 0.5s ease-in-out reverse;
 }
 
+@keyframes navbar {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(100%, 0%);
+  }
+}
 .hamburger {
   display: none;
   visibility: hidden;
@@ -249,6 +258,21 @@ body {
     max-width: 100vw;
     overflow-x: hidden;
   }
+}
+
+#shadow {
+  background-color: rgba(0, 0, 0, 0.658);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 7777;
+  display: none;
+}
+
+#shadow.active {
+  display: block;
 }
 
 main {
@@ -636,7 +660,6 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  border: 2px solid yellow;
   padding: 50px;
 }
 #container-product .product-description-container {
@@ -646,10 +669,8 @@ main {
   flex-direction: column;
   width: 35%;
   height: 90%;
-  border: 2px solid red;
 }
 #container-product .product-description-container .description-text {
-  border: 2px solid green;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -663,14 +684,12 @@ main {
   font-weight: 600;
   font-family: "DM Serif Text", serif;
   width: 80%;
-  border: 2px solid pink;
   text-align: left;
 }
 #container-product .product-description-container .description-text p {
   font-size: 1.2rem;
   font-weight: 400;
   width: 80%;
-  border: 2px solid pink;
 }
 #container-product .product-description-container .description-text button {
   padding: 5px 30px;
@@ -687,10 +706,16 @@ main {
   #container-product .product-description-container {
     width: 100%;
   }
+  #container-product .product-description-container .description-text {
+    height: 350px;
+  }
 }
 @media (max-width: 700px) {
   #container-product .product-description-container {
     width: 100%;
+  }
+  #container-product .product-description-container .description-text {
+    height: 400px;
   }
   #container-product .product-description-container .description-text h1 {
     padding: 0;
@@ -704,7 +729,6 @@ main {
   width: 65%;
   min-width: 350px;
   height: 90%;
-  border: 2px solid blue;
 }
 #container-product .product-imgs-container .product-img-cards {
   display: flex;
@@ -719,7 +743,6 @@ main {
   width: 100%;
   position: relative;
   overflow: hidden;
-  border: 2px solid green;
 }
 #container-product .product-imgs-container .product-img-cards .container-cards .wrapper-cards {
   transition: all 0.5s ease-in-out;
