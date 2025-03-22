@@ -880,6 +880,9 @@ main {
   height: 70%;
 }
 @media (max-width: 700px) {
+  #our-product {
+    padding: 0;
+  }
   #our-product .container-our .container-products .product {
     width: 200px;
     height: 300px;
