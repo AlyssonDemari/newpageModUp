@@ -197,9 +197,8 @@ main{
         flex-direction: column;
         gap: 20px;
         height: 50%;
-
         h1{
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 600;
             font-family: $font1;
         }
@@ -214,8 +213,8 @@ main{
 
             .project{
                 background: $dark-grey;
-                width: 30%;
-                height: 90%;
+                width: 25%;
+                height: 80%;
                 position: relative;
 
                 img{
@@ -291,9 +290,9 @@ main{
 
     .container-collection-second{
         @include center();
+        align-items: flex-start;
         gap: 20px;
         height: 50%;
-
 
         h1{
             font-size: 3.5rem;
@@ -303,16 +302,15 @@ main{
 
         p{
             width: 90%;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .img-collection{
-
             position: relative;
             @include center();
             background: $dark-grey;
-            width: 40%;
-            height: 90%;
+            width: 30%;
+            height: 80%;
             border-radius: 20% 5px 5px 5px;
 
             img{
@@ -365,6 +363,7 @@ main{
         //! Responsividade para smatphones
         @media (min-width: 480px) and (max-width: 700px){
             flex-direction: column-reverse;
+            align-items: center;
 
             h1{
                 text-align: center;
@@ -638,16 +637,18 @@ main{
 }
 
 #our-product{
-    border: 2px solid red;
     @include center();
     flex-direction: column;
     gap: 20px;
+    padding: 50px;
     text-align: center;
-    height: 100vh;
     width: 100%;
+    background: $white;
     
     h1{
-        border: 2px solid pink;
+        font-size: 3rem;
+        font-weight: 600;
+        font-family: $font1;
     }
 
     .container-our{
@@ -660,25 +661,24 @@ main{
             @include center();
             flex-wrap: wrap;
             gap: 30px;
-            border: 2px solid red;
-            width: 100%;
+            width: 90%;
             
             height: 100%;
-    
+            
+            
             .product{
                 @include center();
                 flex-direction: column;
                 justify-content: space-between;
-
-                border: 2px solid blue;
+                background: $dark-grey;
                 width: 250px;
                 height: 400px;
 
                 .product-text{
                     @include center();
                     flex-direction: column;
-                    align-items: self-start;
-                    background-color: aliceblue;
+                    gap: 20px;
+                    background-color: $white;
                     padding: 20px;
                     width: 100%;
                     height: 30%;
@@ -687,6 +687,21 @@ main{
                 img{
                     width: 100%;
                     height: 70%;
+                }
+            }
+        }
+    }
+
+    //! Responsividade para smatphones
+    @media (max-width: 700px){
+
+        .container-our{
+       
+            .container-products{
+
+                .product{
+                    width: 200px;
+                    height: 300px;
                 }
             }
         }
