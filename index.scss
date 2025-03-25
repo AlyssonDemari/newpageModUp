@@ -551,7 +551,7 @@ main{
     
             .container-cards{
                 height: 90%;
-                width: 100%;
+                width: 90%;
                 position: relative;
                 overflow: hidden;
                 
@@ -568,8 +568,8 @@ main{
 
                     .card{
                         width: 100%;
-                        min-width: 350px;
-                        max-width: 350px;
+                        min-width: 320px;
+                        // max-width: 320px;
                         height: 90%;
                         transition: all 0.5s ease-in-out;
 
@@ -590,8 +590,6 @@ main{
                             height: 20%;
                             width: 100%;
                         }
-
-                        
                     }
                 }
             }
@@ -619,11 +617,10 @@ main{
                 }
             }
         }
+    }
 
-        //! Responsividade para tablets
-        @media (min-width: 700px) and (max-width: 1165px){
-            width: 100%;
-        }
+    .products-img-container-mobile{
+        display: none;
     }
 
     //! Responsividade para tablets
@@ -634,7 +631,70 @@ main{
     //! Responsividade para smatphones
     @media (max-width: 700px){
         padding: 0;
+
+        .product-imgs-container{
+            display: none;
+        }
+
+        .products-img-container-mobile{
+            display: flex;
+            width: 100%;
+            padding: 50px;
+
+            .container-img-mobile{
+                width: 100%;
+                height: 100%;
+
+                .img-mobile{
+                    height: 100px;
+                    overflow: hidden;
+                    transition: all 0.5s ease-in-out;
+                    filter: saturate(0);
+
+                    &::before{
+                        content: '\002B9E';
+                        font-size: 1rem;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        padding: 10px 20px;
+                        width: 100%;
+                        height: 100%;
+                        transition: all 0.5s ease-in-out;
+                    }
+
+                    &:hover::before{
+                        content: '\002B9F';
+                        transition: all 0.5s ease-in-out;
+                    }
+        
+                    &:hover{
+                        transition: all 0.5s ease-in-out;
+                        height: 300px;
+                        filter: saturate(1);
+                    }
+
+                    img{
+                        width: 100%;
+                        background-color: $darker-grey;
+                    }
+                }
+            }
+        }
     }
+
+        //! Responsividade para smatphones
+        @media (max-width: 400px){
+            padding: 0;
+    
+            .product-imgs-container{
+                display: none;
+            }
+    
+            .products-img-container-mobile{
+                padding: 10px;
+            }
+        }
 }
 
 #our-product{
