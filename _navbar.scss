@@ -6,6 +6,10 @@ header{
     margin-bottom: 50px;
 }
 
+a{
+    color: $darker-grey;
+}
+
 nav{
     display: flex;
     align-items: center;

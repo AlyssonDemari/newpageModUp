@@ -44,6 +44,10 @@ header {
   margin-bottom: 50px;
 }
 
+a {
+  color: #5e5e5e;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -862,7 +866,7 @@ main {
   justify-content: space-between;
   background: #807e7e;
   width: 250px;
-  height: 400px;
+  height: 350px;
 }
 #our-product .container-our .container-products .product .product-text {
   display: flex;
@@ -886,5 +890,59 @@ main {
   #our-product .container-our .container-products .product {
     width: 200px;
     height: 300px;
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(65, 62, 62);
+  background-size: cover;
+  height: 100%;
+  margin-top: 100px;
+  padding-top: 40px;
+}
+footer .footer-redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+  width: 100%;
+}
+footer .footer-redes i {
+  font-size: 2.5rem;
+  margin-inline-end: 20px;
+}
+footer .footer-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0px 50px 0px;
+}
+footer .footer-list table {
+  width: 80%;
+}
+footer .footer-list table thead tr th {
+  padding-bottom: 20px;
+  text-align: start;
+  font-size: 1.2rem;
+  color: #FFF;
+}
+footer .footer-list table tbody tr td {
+  color: #c6c6c6;
+}
+@media (max-width: 700px) {
+  footer {
+    padding-top: 0;
+  }
+  footer .footer-redes {
+    padding: 50px 0;
+  }
+  footer .footer-list {
+    display: none;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -672,7 +672,7 @@ main{
                 justify-content: space-between;
                 background: $dark-grey;
                 width: 250px;
-                height: 400px;
+                height: 350px;
 
                 .product-text{
                     @include center();
@@ -707,4 +707,60 @@ main{
         }
     }
     
+}
+
+footer{
+    @include center();
+    flex-direction: column;
+    background-color: rgb(65, 62, 62);
+    background-size: cover; 
+    height: 100%;
+    margin-top: 100px;
+    padding-top: 40px;
+
+    .footer-redes{
+        @include center();
+        justify-content: space-between;
+        padding-inline: 20px;
+        width: 100%;
+
+        i{
+            font-size: 2.5rem;
+            margin-inline-end: 20px;
+        }
+    }
+
+    .footer-list{
+        @include center();
+        width: 100%;
+        padding: 10px 0px 50px 0px;
+
+        table{
+            width: 80%;
+
+            thead tr th{
+                padding-bottom: 20px;
+                text-align: start;
+                font-size: 1.2rem;
+                color: $white;
+            }
+
+            tbody tr td{
+                color: $lighter-grey;
+
+            }
+        }
+    }
+
+    //! Responsividade para smatphones
+    @media (max-width: 700px){
+        padding-top: 0;
+
+        .footer-redes{
+            padding: 50px 0;
+        }
+        .footer-list{
+            display: none;
+        }
+    }
 }
