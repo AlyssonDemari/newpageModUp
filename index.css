@@ -1000,11 +1000,21 @@ footer .footer-list table tbody tr td {
 @media (max-width: 700px) {
   footer {
     padding-top: 0;
+    padding-inline: 50px;
   }
   footer .footer-redes {
     padding: 50px 0;
   }
   footer .footer-list {
     display: none;
+  }
+}
+@media (max-width: 500px) {
+  footer .footer-redes {
+    flex-direction: column;
+    gap: 20px;
+  }
+  footer .footer-redes i {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=index.css.map */

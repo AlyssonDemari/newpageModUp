@@ -762,12 +762,24 @@ footer{
     //! Responsividade para smatphones
     @media (max-width: 700px){
         padding-top: 0;
+        padding-inline: 50px;
 
         .footer-redes{
             padding: 50px 0;
         }
         .footer-list{
             display: none;
+        }
+    }
+
+    @media (max-width: 500px){
+        .footer-redes{
+            flex-direction: column;
+            gap: 20px;
+
+            i{
+                font-size: 2rem;
+            }
         }
     }
 }
