@@ -8,6 +8,14 @@ hamburger.addEventListener('click', () => {
     shadow.classList.toggle('active');
 });
 
+document.addEventListener('click', (event) => {
+    if (!navMobile.contains(event.target) && !hamburger.contains(event.target)) {
+        navMobile.classList.remove('active');
+        hamburger.classList.remove('active');
+        shadow.classList.remove('active');
+    }
+});
+
 
 const wrapper = document.querySelector('.wrapper-cards');
 const firstRadio = document.querySelector('#primeiro');
