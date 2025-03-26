@@ -54,6 +54,7 @@ body{
         background-position: left bottom;
         color: $white;
         transition: color 2s, background-position 1s ease;
+        cursor: pointer;
     }
 }
 
@@ -77,6 +78,7 @@ body{
         background-position: right top;
         color: $white;
         transition: color 2s, background-position 1s ease;
+        cursor: pointer;
     }
 }
 
@@ -98,5 +100,6 @@ body{
         background-position: right bottom;
         color: $white;
         transition: color 2s, background-position 1s ease;
+        cursor: pointer;
     }
 }

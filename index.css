@@ -107,6 +107,7 @@ nav button:hover {
   background-position: right bottom;
   color: #FFF;
   transition: color 2s, background-position 1s ease;
+  cursor: pointer;
 }
 @media (max-width: 1165px) {
   nav {
@@ -360,6 +361,7 @@ main {
   background-position: left bottom;
   color: #FFF;
   transition: color 2s, background-position 1s ease;
+  cursor: pointer;
 }
 #container-home .container-img-home {
   display: flex;
@@ -511,6 +513,7 @@ main {
   background-position: right top;
   color: #FFF;
   transition: color 2s, background-position 1s ease;
+  cursor: pointer;
 }
 @media (min-width: 700px) and (max-width: 1165px) {
   #container-collection .container-text-collection p {
@@ -766,6 +769,7 @@ main {
   background-position: right bottom;
   color: #FFF;
   transition: color 2s, background-position 1s ease;
+  cursor: pointer;
 }
 @media (min-width: 700px) and (max-width: 1165px) {
   #container-product .product-description-container {
