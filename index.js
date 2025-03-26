@@ -2,19 +2,19 @@ const hamburger = document.querySelector('.hamburger');
 const navMobile = document.querySelector('.nav-mobile');
 const shadow = document.querySelector('#shadow');
 
-hamburger.addEventListener('click', () => {
+hamburger.addEventListener('click', (event) => {
+    event.stopPropagation(); 
     hamburger.classList.toggle('active');
     navMobile.classList.toggle('active');
     shadow.classList.toggle('active');
 });
 
-document.addEventListener('click', (event) => {
-    if (!navMobile.contains(event.target) && !hamburger.contains(event.target)) {
-        navMobile.classList.remove('active');
-        hamburger.classList.remove('active');
-        shadow.classList.remove('active');
-    }
+document.addEventListener('click', () => {
+    navMobile.classList.remove('active');
+    hamburger.classList.remove('active');
+    shadow.classList.remove('active');
 });
+
 
 
 const wrapper = document.querySelector('.wrapper-cards');
