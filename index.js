@@ -8,25 +8,6 @@ const toggleMenu = () => {
     shadow.classList.toggle('active');
 };
 
-hamburger.addEventListener('click', (event) => {
-    event.stopPropagation(); 
-    toggleMenu();
-});
-
-hamburger.addEventListener('touchstart', (event) => {
-    event.stopPropagation(); 
-    toggleMenu();
-});
-
-const closeMenu = () => {
-    navMobile.classList.remove('active');
-    hamburger.classList.remove('active');
-    shadow.classList.remove('active');
-};
-
-document.addEventListener('click', closeMenu);
-document.addEventListener('touchstart', closeMenu);
-
 
 
 
