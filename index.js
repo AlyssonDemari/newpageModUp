@@ -2,18 +2,32 @@ const hamburger = document.querySelector('.hamburger');
 const navMobile = document.querySelector('.nav-mobile');
 const shadow = document.querySelector('#shadow');
 
-hamburger.addEventListener('click', (event) => {
-    event.stopPropagation(); 
+const toggleMenu = () => {
     hamburger.classList.toggle('active');
     navMobile.classList.toggle('active');
     shadow.classList.toggle('active');
+};
+
+hamburger.addEventListener('click', (event) => {
+    event.stopPropagation(); 
+    toggleMenu();
 });
 
-document.addEventListener('click', () => {
+hamburger.addEventListener('touchstart', (event) => {
+    event.stopPropagation(); 
+    toggleMenu();
+});
+
+const closeMenu = () => {
     navMobile.classList.remove('active');
     hamburger.classList.remove('active');
     shadow.classList.remove('active');
-});
+};
+
+document.addEventListener('click', closeMenu);
+document.addEventListener('touchstart', closeMenu);
+
+
 
 
 
