@@ -693,6 +693,7 @@ main{
     
             .products-img-container-mobile{
                 padding: 10px;
+
             }
         }
 }
@@ -702,6 +703,7 @@ main{
     flex-direction: column;
     gap: 20px;
     padding: 50px;
+    border: 2px solid red;
     text-align: center;
     width: 100%;
     background: $white;
@@ -755,7 +757,7 @@ main{
 
     //! Responsividade para smatphones
     @media (max-width: 700px){
-        padding: 0;
+        padding: 100px;
         .container-our{
             
             .container-products{
@@ -776,7 +778,6 @@ footer{
     background-color: rgb(65, 62, 62);
     background-size: cover; 
     height: 100%;
-    margin-top: 100px;
     padding-top: 40px;
 
     .footer-redes{
